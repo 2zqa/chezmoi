@@ -1,1 +1,2 @@
 bind 'set show-all-if-ambiguous on'
+export PATH=$PATH:~/go/bin
