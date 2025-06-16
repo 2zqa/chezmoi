@@ -1,0 +1,84 @@
+{
+  // General
+  "update.mode": "none",
+  "terminal.integrated.enablePersistentSessions": false,
+  "window.autoDetectColorScheme": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "debug.toolBarLocation": "commandCenter",
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "window.zoomLevel": 1,
+  "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
+  },
+  "files.exclude": {
+    "*.egg-info": true,
+    ".pytest_cache": true,
+    ".ruff_cache": true,
+    "__pycache__": true,
+  },
+  //
+  //  Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.autofetch": true,
+  "git.detectSubmodules": false,
+  //
+  // Files
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
+  "github.copilot.editor.enableCodeActions": false,
+  //
+  // == Languages ==
+  //
+  // Nix
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    // check https://github.com/nix-community/nixd/blob/main/nixd/docs/configuration.md for all nixd config
+    "nixd": {
+      "formatting": {
+        "command": [
+          "nixfmt"
+        ]
+      }
+    }
+  },
+  //
+  // Go
+  "go.survey.prompt": false,
+  "go.toolsManagement.checkForUpdates": "local",
+  //
+  // Python
+  "basedpyright.analysis.autoImportCompletions": true,
+  "basedpyright.analysis.inlayHints.functionReturnTypes": true,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.rulers": [
+      119
+    ]
+  },
+  //
+  // JS
+  "javascript.suggest.names": false,
+  //
+  // Misc
+  "redhat.telemetry.enabled": false,
+  "basedpyright.analysis.typeCheckingMode": "basic",
+  "basedpyright.analysis.diagnosticMode": "workspace",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "diffEditor.hideUnchangedRegions.enabled": true,
+}
