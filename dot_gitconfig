@@ -1,0 +1,10 @@
+[user]
+	name = Marijn Kok
+	email = marijn.kok@voys.nl
+
+[push]
+	autoSetupRemote = true
+
+[includeIf "hasconfig:remote.*.url:git@github.com:2zqa/**"]
+	path = .gitconfig-github
+
