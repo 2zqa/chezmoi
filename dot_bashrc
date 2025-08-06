@@ -4,3 +4,7 @@ export PATH=$PATH:~/go/bin
 alias ls='ls --color --group-directories-first'
 alias wl-copy='wl-copy --trim-newline'
 alias o='xdg-open .'
+alias enix='vim $HOME/nix/configuration.nix'
+alias nixmake='(cd $HOME/nix; make)'
+
+cat ~/todo.txt 2> /dev/null

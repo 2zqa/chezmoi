@@ -8,3 +8,7 @@
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
 	path = .gitconfig-github
 
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = ~/.globalgitignore
