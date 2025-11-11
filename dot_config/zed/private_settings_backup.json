@@ -44,62 +44,16 @@
   "features": {
     "edit_prediction_provider": "none"
   },
-  "context_servers": {
-    "dart": {
-      "source": "custom",
-      "command": "dart",
-      "args": ["mcp-server"],
-      "env": {}
-    }
-  },
   "agent": {
-    "profiles": {
-      "ask": {
-        "name": "Ask",
-        "tools": {
-          "diagnostics": true,
-          "fetch": true,
-          "list_directory": true,
-          "project_notifications": false,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "open": true,
-          "grep": true,
-          "thinking": true,
-          "web_search": true
-        },
-        "enable_all_context_servers": false,
-        "context_servers": {
-          "dart": {
-            "tools": {
-              "signature_help": true,
-              "resolve_workspace_symbol": true,
-              "pub_dev_search": true,
-              "list_running_apps": true,
-              "list_devices": true,
-              "hover": true,
-              "get_widget_tree": true,
-              "get_selected_widget": true,
-              "get_runtime_errors": true,
-              "get_app_logs": true,
-              "get_active_location": true,
-              "connect_dart_tooling_daemon": true,
-              "analyze_files": true
-            }
-          }
-        }
-      }
-    },
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "claude-sonnet-4"
     }
   },
 
@@ -142,8 +96,12 @@
       "language_servers": ["basedpyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
-        { "code_action": "source.organizeImports.ruff" },
-        { "code_action": "source.fixAll.ruff" },
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
         {
           "language_server": {
             "name": "ruff"

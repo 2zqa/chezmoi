@@ -2,3 +2,5 @@ Host github github.com
 	User git
 	HostName github.com
 	IdentityFile ~/.ssh/github_ed25519
+Host mc.marijnk.nl
+	IdentityFile ~/.ssh/personal_ed25519
